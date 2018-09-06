@@ -22,3 +22,15 @@ target 'BoilerPlate-tvOS' do
   end
 
 end
+
+post_install do |installer|
+      target.build_configurations.each do |config|
+        if config.name == 'Staging'
+            config.build_settings['CONFIGURATION_BUILD_DIR'] = '$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)'
+        end
+      end
+    end
+    if target.name == "React"
+      target.remove_from_project
+    end
+end
