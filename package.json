@@ -1,0 +1,67 @@
+{
+  "name": "BoilerPlate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "author": "anhduc.hoang",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bignumber.js": "^7.2.1",
+    "dotenv": "^6.0.0",
+    "envfile": "^2.3.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "prop-types": "^15.6.2",
+    "react": "16.4.1",
+    "react-native": "0.56.0",
+    "react-native-keyboard-aware-scrollview": "^2.0.0",
+    "react-native-linear-gradient": "^2.4.0",
+    "react-native-modal-datetime-picker": "^6.0.0",
+    "react-native-modal-dropdown": "^0.6.2",
+    "react-native-nested-scroll-view": "^7.0.0",
+    "react-native-svg": "^6.5.2",
+    "react-navigation": "^2.12.1",
+    "react-navigation-redux-helpers": "^2.0.5",
+    "react-navigation-stack": "^0.2.3",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^0.16.0",
+    "styled-components": "^3.4.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.9",
+    "@types/react-native": "^0.56.7",
+    "@types/react-native-linear-gradient": "^2.4.0",
+    "@types/react-navigation": "^2.0.15",
+    "@types/react-redux": "^6.0.0",
+    "@types/redux-devtools-extension": "^2.13.2",
+    "@types/redux-persist": "^4.3.1",
+    "babel-jest": "23.4.2",
+    "babel-preset-react-native": "^5",
+    "husky": "^1.0.0-rc.13",
+    "jest": "23.5.0",
+    "lint-staged": "^7.2.2",
+    "prettier": "1.14.2",
+    "react-native-create-bridge": "^2.0.1",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
