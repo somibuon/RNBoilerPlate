@@ -24,6 +24,8 @@ target 'BoilerPlate-tvOS' do
 end
 
 post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == 'Pods-BoilerPlate'
       target.build_configurations.each do |config|
         if config.name == 'Staging'
             config.build_settings['CONFIGURATION_BUILD_DIR'] = '$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)'
@@ -33,4 +35,6 @@ post_install do |installer|
     if target.name == "React"
       target.remove_from_project
     end
+  end
 end
+
